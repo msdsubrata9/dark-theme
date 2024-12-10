@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { findPrime } from "./utils/helper";
+import Demo from "./components/Demo";
 
 function App() {
   const [text, setText] = useState("");
@@ -7,7 +8,7 @@ function App() {
 
   const prime = useMemo(() => findPrime(text), [text]);
   return (
-    <div className="App">
+    <div className="App flex">
       <div>
         <div
           className={`p-2 m-4 w-96 h-96 border flex flex-col items-center ${
@@ -39,6 +40,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Demo />
     </div>
   );
 }
